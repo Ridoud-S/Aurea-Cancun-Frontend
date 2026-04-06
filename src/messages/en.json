@@ -10,6 +10,7 @@
     },
     "hero": {
         "title": "Discover beachfront luxury in Cancún",
-        "subtitle": "Escape to a premium experience of white sand, gastronomy and comfort."
+        "subtitle": "Escape to a premium experience of white sand, gastronomy and comfort.",
+        "button": "Book now"
     }
 }
