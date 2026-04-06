@@ -8,8 +8,29 @@
         "contact": "Contacto",
         "bookNow": "Reservar ahora"
     },
-    "hero": {
-        "title": "Descubre el lujo frente al mar en Cancún",
-        "subtitle": "Escápate a una experiencia premium entre arena blanca, gastronomía y confort."
+    "home": {
+        "hero": {
+            "title": "Descubre el lujo frente al mar en Cancún",
+            "subtitle": "Escápate a una experiencia premium...",
+            "button": "Explorar Habitaciones"
+        },
+        "welcome": {
+            "title": "Bienvenido a Aurea",
+            "description": "Un oasis de tranquilidad..."
+        }
+    },
+    "offersPage": {
+        "hero": {
+            "title": "Ofertas Exclusivas",
+            "subtitle": "Reserva directo y obtén los mejores beneficios.",
+            "button": "Explorar Ofertas"
+        }
+    },
+    "roomsPage": {
+        "hero": {
+            "title": "Nuestras Habitaciones",
+            "subtitle": "Confort y elegancia con vista al mar Caribe.",
+            "button": "Explorar Habitaciones"
+        }
     }
 }
