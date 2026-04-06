@@ -1,0 +1,15 @@
+{
+    "nav": {
+        "home": "Home",
+        "rooms": "Rooms",
+        "offers": "Offers",
+        "amenities": "Amenities",
+        "experiences": "Experiences",
+        "contact": "Contact",
+        "bookNow": "Book now"
+    },
+    "hero": {
+        "title": "Discover beachfront luxury in Cancún",
+        "subtitle": "Escape to a premium experience of white sand, gastronomy and comfort."
+    }
+}

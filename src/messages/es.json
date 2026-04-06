@@ -1,0 +1,15 @@
+{
+    "nav": {
+        "home": "Inicio",
+        "rooms": "Habitaciones",
+        "offers": "Ofertas",
+        "amenities": "Amenidades",
+        "experiences": "Experiencias",
+        "contact": "Contacto",
+        "bookNow": "Reservar ahora"
+    },
+    "hero": {
+        "title": "Descubre el lujo frente al mar en Cancún",
+        "subtitle": "Escápate a una experiencia premium entre arena blanca, gastronomía y confort."
+    }
+}
