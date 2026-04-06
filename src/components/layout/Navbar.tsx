@@ -1,32 +1,41 @@
 "use client";
 
-import { useTranslations } from 'next-intl';
-import { navLinks } from '@/constants/nav-links';
-import { Link, usePathname } from '@/i18n/navigation';
-import { cn } from '@/lib/utils';
+import { useTranslations } from "next-intl";
+import { navLinks } from "@/constants/nav-links";
+import { Link, usePathname } from "@/i18n/navigation";
+import { cn } from "@/lib/utils";
 
-export default function Navbar() {
-    const t = useTranslations('nav');
-    const pathname = usePathname();
+interface NavbarProps {
+  isScrolled: boolean;
+}
 
-    return (
-        <nav className="hidden items-center gap-6 lg:flex">
-            {navLinks.map((link) => {
-                const isActive = pathname === link.href;
+export default function Navbar({ isScrolled }: NavbarProps) {
+  const t = useTranslations("nav");
+  const pathname = usePathname();
 
-                return (
-                    <Link
-                        key={link.key}
-                        href={link.href}
-                        className={cn(
-                            "text-sm font-medium transition-colors hover:text-cyan-600",
-                            isActive ? "text-cyan-600" : "text-foreground"
-                        )}
-                    >
-                        {t(link.key)}
-                    </Link>
-                );
-            })}
-        </nav>
-    );
+  return (
+    <nav className="flex items-center gap-7">
+      {navLinks.map((link) => {
+        const isActive = pathname === link.href;
+        return (
+          <Link
+            key={link.key}
+            href={link.href}
+            className={cn(
+              "text-sm font-medium tracking-wide transition-colors duration-200",
+              isScrolled
+                ? isActive
+                  ? "text-amber-700"
+                  : "text-slate-900 hover:text-amber-700"
+                : isActive
+                  ? "text-white font-semibold"
+                  : "text-white/80 hover:text-white"
+            )}
+          >
+            {t(link.key)}
+          </Link>
+        );
+      })}
+    </nav>
+  );
 }

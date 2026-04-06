@@ -16,7 +16,7 @@ export default function MobileMenu() {
     const t = useTranslations("nav");
 
     return (
-        <div className="md:hidden">
+        <div className="lg:hidden">
             <Sheet>
                 <SheetTrigger asChild>
                     <Button variant="outline" size="icon">
