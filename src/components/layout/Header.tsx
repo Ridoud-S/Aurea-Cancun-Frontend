@@ -33,14 +33,12 @@ export default function Header() {
       <Container className="hidden lg:flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
-          <img
-            src="/logo.png"
-            alt="Aurea Cancún"
-            className={cn(
-              "h-10 w-auto transition-all duration-300",
-              isScrolled ? "brightness-0" : "brightness-100"
-            )}
-          />
+          <span className={cn(
+            "font-serif text-xl tracking-[0.2em] uppercase transition-all duration-300",
+            isScrolled ? "text-slate-900" : "text-white"
+          )}>
+            Aurea Cancún
+          </span>
         </Link>
 
         {/* Nav central */}
@@ -48,7 +46,7 @@ export default function Header() {
 
         {/* Derecha: idioma + CTA */}
         <div className="flex items-center gap-3 flex-shrink-0">
-          <LanguageSwitcher />
+          <LanguageSwitcher isScrolled={isScrolled} />
           <Button
             size="sm"
             className={cn(
@@ -67,14 +65,12 @@ export default function Header() {
       {/* Mobile — logo izquierda + hamburguesa derecha */}
       <Container className="flex lg:hidden items-center justify-between">
         <Link href="/" className="flex-shrink-0">
-          <img
-            src="/logo.png"
-            alt="Aurea Cancún"
-            className={cn(
-              "h-8 w-auto transition-all duration-300",
-              isScrolled ? "brightness-0" : "brightness-100"
-            )}
-          />
+          <span className={cn(
+            "font-serif text-lg tracking-[0.2em] uppercase transition-all duration-300",
+            isScrolled ? "text-slate-900" : "text-white"
+          )}>
+            Aurea Cancún
+          </span>
         </Link>
         <MobileMenu />
       </Container>
