@@ -1,25 +1,25 @@
 {
     "nav": {
-    "home": "Inicio",
-    "rooms": "Habitaciones",
-    "offers": "Ofertas",
-    "amenities": "Amenidades",
-    "suites": "Suites",
-    "experiences": "Experiencias",
-    "gastronomy": "Gastronomía",
-    "spa": "Spa",
-    "contact": "Contacto",
-    "bookNow": "Reservar ahora"
-},
+        "home": "Inicio",
+        "rooms": "Habitaciones",
+        "offers": "Ofertas",
+        "amenities": "Amenidades",
+        "suites": "Suites",
+        "experiences": "Experiencias",
+        "gastronomy": "Gastronomía",
+        "spa": "Spa",
+        "contact": "Contacto",
+        "bookNow": "Reservar ahora"
+    },
     "home": {
         "hero": {
             "title": "Descubre el lujo frente al mar en Cancún",
-            "subtitle": "Escápate a una experiencia premium...",
+            "subtitle": "Escápate a una experiencia premium de arena blanca, gastronomía y confort.",
             "button": "Explorar Habitaciones"
         },
         "welcome": {
             "title": "Bienvenido a Aurea",
-            "description": "Un oasis de tranquilidad..."
+            "description": "Un oasis de tranquilidad a orillas del Mar Caribe."
         }
     },
     "offersPage": {
@@ -35,5 +35,29 @@
             "subtitle": "Confort y elegancia con vista al mar Caribe.",
             "button": "Explorar Habitaciones"
         }
+    },
+    "footer": {
+        "tagline": "Un oasis de lujo frente al mar Caribe. Experiencias únicas, gastronomía de autor y el servicio más refinado de la Riviera Maya.",
+        "columns": {
+            "company": "Empresa",
+            "links": "Links"
+        },
+        "company": {
+            "about": "Sobre Aurea",
+            "suites": "Suites",
+            "experiences": "Experiencias",
+            "gastronomy": "Gastronomía",
+            "spa": "Spa & Wellness"
+        },
+        "links": {
+            "book": "Reservar ahora",
+            "offers": "Ofertas exclusivas",
+            "contact": "Contacto",
+            "privacy": "Aviso de privacidad",
+            "legal": "Aviso legal",
+            "bestRate": "Mejor tarifa garantizada"
+        },
+        "copyright": "© 2026 Aurea Cancún. Todos los derechos reservados.",
+        "location": "Luxury Beachfront · Cancún, México"
     }
 }
