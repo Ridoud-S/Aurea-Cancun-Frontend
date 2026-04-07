@@ -1,40 +1,48 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import Container from "@/components/common/Container";
 import { Separator } from "@/components/ui/separator";
 
-
 // ---------------------------------------------------------------------------
-// Data
+// Tipos derivados del sistema de pathnames de next-intl
 // ---------------------------------------------------------------------------
-const empresa = [
-  { label: "Sobre Aurea", href: "/sobre-nosotros" },
-  { label: "Suites", href: "/suites" },
-  { label: "Experiencias", href: "/experiencias" },
-  { label: "Gastronomía", href: "/gastronomia" },
-  { label: "Spa & Wellness", href: "/spa" },
-];
-
-const links = [
-  { label: "Reservar ahora", href: "/reservar" },
-  { label: "Ofertas exclusivas", href: "/ofertas" },
-  { label: "Contacto", href: "/contacto" },
-  { label: "Aviso de privacidad", href: "/privacidad" },
-  { label: "Aviso legal", href: "/legal" },
-  { label: "Mejor tarifa garantizada", href: "/reservar" },
-];
-
+type EmpresaKey = `company.${"about" | "suites" | "experiences" | "gastronomy" | "spa"}`;
+type LinkKey = `links.${"book" | "offers" | "contact" | "privacy" | "legal" | "bestRate"}`;
 
 // ---------------------------------------------------------------------------
 // Component
 // ---------------------------------------------------------------------------
 export default function Footer() {
+  const t = useTranslations("footer");
+
+  // Rutas base en inglés — next-intl las mapea a /es/sobre-nosotros, etc.
+  // via el objeto `pathnames` en src/i18n/routing.ts
+  const empresa: Array<{ labelKey: EmpresaKey; href: "/about" | "/suites" | "/experiences" | "/gastronomy" | "/spa" }> = [
+    { labelKey: "company.about", href: "/about" },
+    { labelKey: "company.suites", href: "/suites" },
+    { labelKey: "company.experiences", href: "/experiences" },
+    { labelKey: "company.gastronomy", href: "/gastronomy" },
+    { labelKey: "company.spa", href: "/spa" },
+  ];
+
+  const links: Array<{ labelKey: LinkKey; href: "/book" | "/offers" | "/contact" | "/privacy" | "/legal" | "/best-rate" }> = [
+    { labelKey: "links.book", href: "/book" },
+    { labelKey: "links.offers", href: "/offers" },
+    { labelKey: "links.contact", href: "/contact" },
+    { labelKey: "links.privacy", href: "/privacy" },
+    { labelKey: "links.legal", href: "/legal" },
+    { labelKey: "links.bestRate", href: "/best-rate" },
+  ];
+
   return (
     <footer className="bg-stone-950 text-white">
       {/* Main grid */}
       <Container className="py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
 
-          {/* Columna 1 — Marca + descripción + redes */}
+          {/* Columna 1 — Marca + descripción */}
           <div className="flex flex-col gap-6">
             <div>
               <p className="font-serif text-2xl tracking-[0.2em] uppercase text-white">
@@ -43,20 +51,18 @@ export default function Footer() {
               <Separator className="mt-3 w-12 bg-amber-700/60" />
             </div>
             <p className="text-sm text-white/60 leading-relaxed max-w-xs">
-              Un oasis de lujo frente al mar Caribe. Experiencias únicas,
-              gastronomía de autor y el servicio más refinado de la Riviera Maya.
+              {t("tagline")}
             </p>
             {/* Redes sociales */}
-          
           </div>
 
           {/* Columna 2 — Empresa */}
           <div className="flex flex-col gap-5">
             <h3 className="text-xs tracking-widest uppercase text-amber-600 font-semibold">
-              Empresa
+              {t("columns.company")}
             </h3>
             <ul className="flex flex-col gap-3">
-              {empresa.map(({ label, href }) => (
+              {empresa.map(({ labelKey, href }) => (
                 <li key={href}>
                   <Link
                     href={href}
@@ -66,7 +72,7 @@ export default function Footer() {
                       before:content-['·'] before:text-amber-700
                     "
                   >
-                    {label}
+                    {t(labelKey)}
                   </Link>
                 </li>
               ))}
@@ -76,10 +82,10 @@ export default function Footer() {
           {/* Columna 3 — Links */}
           <div className="flex flex-col gap-5">
             <h3 className="text-xs tracking-widest uppercase text-amber-600 font-semibold">
-              Links
+              {t("columns.links")}
             </h3>
             <ul className="flex flex-col gap-3">
-              {links.map(({ label, href }) => (
+              {links.map(({ labelKey, href }) => (
                 <li key={href}>
                   <Link
                     href={href}
@@ -89,7 +95,7 @@ export default function Footer() {
                       before:content-['·'] before:text-amber-700
                     "
                   >
-                    {label}
+                    {t(labelKey)}
                   </Link>
                 </li>
               ))}
@@ -103,10 +109,10 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <Container className="py-5 flex flex-col md:flex-row items-center justify-between gap-2">
           <p className="text-xs text-white/40">
-            © 2026 Aurea Cancún. Todos los derechos reservados.
+            {t("copyright")}
           </p>
           <p className="text-xs text-white/30 tracking-widest uppercase">
-            Luxury Beachfront · Cancún, México
+            {t("location")}
           </p>
         </Container>
       </div>

@@ -8,9 +8,53 @@
         "contact": "Contact",
         "bookNow": "Book now"
     },
-    "hero": {
-        "title": "Discover beachfront luxury in Cancún",
-        "subtitle": "Escape to a premium experience of white sand, gastronomy and comfort.",
-        "button": "Book now"
+    "home": {
+        "hero": {
+            "title": "Discover beachfront luxury in Cancún",
+            "subtitle": "Escape to a premium experience of white sand, gastronomy and comfort.",
+            "button": "Book now"
+        },
+        "welcome": {
+            "title": "Welcome to Aurea",
+            "description": "An oasis of tranquility on the shores of the Caribbean Sea."
+        }
+    },
+    "offersPage": {
+        "hero": {
+            "title": "Exclusive Offers",
+            "subtitle": "Book directly and get the best benefits.",
+            "button": "Explore Offers"
+        }
+    },
+    "roomsPage": {
+        "hero": {
+            "title": "Our Rooms",
+            "subtitle": "Comfort and elegance with views of the Caribbean Sea.",
+            "button": "Explore Rooms"
+        }
+    },
+    "footer": {
+        "tagline": "An oasis of luxury on the Caribbean Sea. Unique experiences, signature gastronomy and the finest service on the Riviera Maya.",
+        "columns": {
+            "company": "Company",
+            "links": "Links"
+        },
+        "company": {
+            "about": "About Aurea",
+            "suites": "Suites",
+            "experiences": "Experiences",
+            "gastronomy": "Gastronomy",
+            "spa": "Spa & Wellness"
+        },
+        "links": {
+            "book": "Book now",
+            "offers": "Exclusive offers",
+            "contact": "Contact",
+            "privacy": "Privacy policy",
+            "legal": "Legal notice",
+            "bestRate": "Best rate guaranteed"
+        },
+        "copyright": "© 2026 Aurea Cancún. All rights reserved.",
+        "location": "Luxury Beachfront · Cancún, México"
     }
 }
