@@ -1,13 +1,16 @@
 {
     "nav": {
-        "home": "Inicio",
-        "rooms": "Habitaciones",
-        "offers": "Ofertas",
-        "amenities": "Amenidades",
-        "experiences": "Experiencias",
-        "contact": "Contacto",
-        "bookNow": "Reservar ahora"
-    },
+    "home": "Inicio",
+    "rooms": "Habitaciones",
+    "offers": "Ofertas",
+    "amenities": "Amenidades",
+    "suites": "Suites",
+    "experiences": "Experiencias",
+    "gastronomy": "Gastronomía",
+    "spa": "Spa",
+    "contact": "Contacto",
+    "bookNow": "Reservar ahora"
+},
     "home": {
         "hero": {
             "title": "Descubre el lujo frente al mar en Cancún",
