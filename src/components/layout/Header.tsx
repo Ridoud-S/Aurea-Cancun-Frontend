@@ -57,7 +57,7 @@ export default function Header() {
             )}
             asChild
           >
-            <Link href="/reservar">{t("bookNow")}</Link>
+            <Link href="/book">{t("bookNow")}</Link>
           </Button>
         </div>
       </Container>
