@@ -13,7 +13,7 @@ export default async function RoomsPage() {
                 imageSrc="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2560&auto=format&fit=crop"
                 size="full"
                 ctaText={t("button")}
-                ctaHref="/habitaciones"
+                ctaHref="/rooms"
             />
         </main>
     );
