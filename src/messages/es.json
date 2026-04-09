@@ -9,7 +9,8 @@
         "gastronomy": "Gastronomía",
         "spa": "Spa",
         "contact": "Contacto",
-        "bookNow": "Reservar ahora"
+        "bookNow": "Reservar ahora",
+        "menu": "Menú de navegación"
     },
     "home": {
         "hero": {
@@ -59,5 +60,18 @@
         },
         "copyright": "© 2026 Aurea Cancún. Todos los derechos reservados.",
         "location": "Luxury Beachfront · Cancún, México"
+    },
+    "rooms": {
+        "sectionTitle": "Estancias de Lujo",
+        "sectionSubtitle": "Encuentra tu refugio perfecto frente al mar",
+        "from": "Desde",
+        "night": "/ noche",
+        "viewDetails": "Ver Detalles",
+        "types": {
+            "deluxe-ocean": "Deluxe Vista al Mar",
+            "swim-up-suite": "Suite Swim-Up",
+            "family-villa": "Villa Familiar",
+            "presidential": "Suite Presidencial"
+        }
     }
 }
