@@ -6,13 +6,14 @@
         "amenities": "Amenities",
         "experiences": "Experiences",
         "contact": "Contact",
-        "bookNow": "Book now"
+        "bookNow": "Book Now",
+        "menu": "Navigation Menu"
     },
     "home": {
         "hero": {
             "title": "Discover beachfront luxury in Cancún",
-            "subtitle": "Escape to a premium experience of white sand, gastronomy and comfort.",
-            "button": "Book now"
+            "subtitle": "Escape to a premium experience of white sand, gastronomy, and comfort.",
+            "button": "Book Now"
         },
         "welcome": {
             "title": "Welcome to Aurea",
@@ -46,7 +47,7 @@
         }
     },
     "footer": {
-        "tagline": "An oasis of luxury on the Caribbean Sea. Unique experiences, signature gastronomy and the finest service on the Riviera Maya.",
+        "tagline": "A luxury oasis on the Caribbean Sea. Unique experiences, signature cuisine, and the most refined service in the Riviera Maya.",
         "columns": {
             "company": "Company",
             "links": "Links"
@@ -59,28 +60,41 @@
             "spa": "Spa & Wellness"
         },
         "links": {
-            "book": "Book now",
-            "offers": "Exclusive offers",
+            "book": "Book Now",
+            "offers": "Exclusive Offers",
             "contact": "Contact",
-            "privacy": "Privacy policy",
-            "legal": "Legal notice",
-            "bestRate": "Best rate guaranteed"
+            "privacy": "Privacy Policy",
+            "legal": "Legal Notice",
+            "bestRate": "Best Rate Guaranteed"
         },
         "copyright": "© 2026 Aurea Cancún. All rights reserved.",
-        "location": "Luxury Beachfront · Cancún, México"
+        "location": "Luxury Beachfront · Cancún, Mexico"
     },
     "amenities": {
-        "beachAccess":   "Beach Access",
-        "restaurant":    "Restaurant",
+        "beachAccess": "Beach Access",
+        "restaurant": "Restaurant",
         "fitnessCenter": "Fitness Center",
-        "spa":           "Spa & Wellness",
-        "bar":           "Rooftop Bar",
-        "poolBar":       "Pool Bar",
-        "freeWifi":      "Free Wi-Fi",
-        "valetParking":  "Valet Parking",
-        "concierge":     "Concierge",
-        "watersports":   "Water Sports",
+        "spa": "Spa & Wellness",
+        "bar": "Rooftop Bar",
+        "poolBar": "Pool Bar",
+        "freeWifi": "Free Wi-Fi",
+        "valetParking": "Valet Parking",
+        "concierge": "Concierge",
+        "watersports": "Water Sports",
         "gardenTerrace": "Garden Terrace",
-        "rainShower":    "Rain Shower"
+        "rainShower": "Rain Shower"
+    },
+    "rooms": {
+        "sectionTitle": "Luxury Stays",
+        "sectionSubtitle": "Find your perfect oceanfront retreat",
+        "from": "From",
+        "night": "/ night",
+        "viewDetails": "View Details",
+        "types": {
+            "deluxe-ocean": "Deluxe Ocean View",
+            "swim-up-suite": "Swim-Up Suite",
+            "family-villa": "Family Villa",
+            "presidential": "Presidential Suite"
+        }
     }
 }

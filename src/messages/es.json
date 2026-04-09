@@ -6,7 +6,8 @@
         "amenities": "Amenidades",
         "experiences": "Experiencias",
         "contact": "Contacto",
-        "bookNow": "Reservar ahora"
+        "bookNow": "Reservar ahora",
+        "menu": "Menú de navegación"
     },
     "home": {
         "hero": {
@@ -27,7 +28,7 @@
     "offersPage": {
         "hero": {
             "title": "Ofertas Exclusivas",
-            "subtitle": "Reserva directo y obtén los mejores beneficios.",
+            "subtitle": "Reserva directo y obtén los mejors beneficios.",
             "button": "Explorar Ofertas"
         }
     },
@@ -35,7 +36,7 @@
         "hero": {
             "title": "Nuestras Habitaciones",
             "subtitle": "Confort y elegancia con vista al mar Caribe.",
-            "button": "Explorar Habitaciones"
+            "button": "Explorar Hab itaciones"
         }
     },
     "amenitiesPage": {
@@ -82,5 +83,18 @@
         "watersports": "Deportes acuáticos",
         "gardenTerrace": "Terraza jardín",
         "rainShower": "Ducha de lluvia"
+    },
+    "rooms": {
+        "sectionTitle": "Estancias de Lujo",
+        "sectionSubtitle": "Encuentra tu refugio perfecto frente al mar",
+        "from": "Desde",
+        "night": "/ noche",
+        "viewDetails": "Ver Detalles",
+        "types": {
+            "deluxe-ocean": "Deluxe Vista al Mar",
+            "swim-up-suite": "Suite Swim-Up",
+            "family-villa": "Villa Familiar",
+            "presidential": "Suite Presidencial"
+        }
     }
 }

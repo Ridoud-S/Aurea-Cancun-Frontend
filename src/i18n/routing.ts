@@ -12,6 +12,10 @@ export const routing = defineRouting({
             es: '/habitaciones',
             en: '/rooms',
         },
+        '/rooms/[slug]': {
+            es: '/habitaciones/[slug]',
+            en: '/rooms/[slug]',
+        },
         '/offers': {
             es: '/ofertas',
             en: '/offers',
