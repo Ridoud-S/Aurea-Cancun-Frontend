@@ -37,7 +37,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-stone-950 text-white">
+    <footer className="bg-foreground text-background">
       {/* Main grid */}
       <Container className="py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -45,12 +45,12 @@ export default function Footer() {
           {/* Columna 1 — Marca + descripción */}
           <div className="flex flex-col gap-6">
             <div>
-              <p className="font-serif text-2xl tracking-[0.2em] uppercase text-white">
+              <p className="font-serif text-2xl tracking-[0.2em] uppercase text-background">
                 Aurea Cancún
               </p>
-              <Separator className="mt-3 w-12 bg-amber-700/60" />
+              <Separator className="mt-3 w-12 bg-primary/60" />
             </div>
-            <p className="text-sm text-white/60 leading-relaxed max-w-xs">
+            <p className="text-sm text-background/60 leading-relaxed max-w-xs">
               {t("tagline")}
             </p>
             {/* Redes sociales */}
@@ -58,7 +58,7 @@ export default function Footer() {
 
           {/* Columna 2 — Empresa */}
           <div className="flex flex-col gap-5">
-            <h3 className="text-xs tracking-widest uppercase text-amber-600 font-semibold">
+            <h3 className="text-xs tracking-widest uppercase text-primary font-semibold">
               {t("columns.company")}
             </h3>
             <ul className="flex flex-col gap-3">
@@ -67,9 +67,9 @@ export default function Footer() {
                   <Link
                     href={href}
                     className="
-                      text-sm text-white/70 hover:text-amber-400
-                      transition-colors duration-200 flex items-center gap-2
-                      before:content-['·'] before:text-amber-700
+                      text-sm text-background/70 hover:text-primary hover:-translate-y-1 block
+                      transition-all duration-500 flex items-center gap-2
+                      before:content-['·'] before:text-primary
                     "
                   >
                     {t(labelKey)}
@@ -81,7 +81,7 @@ export default function Footer() {
 
           {/* Columna 3 — Links */}
           <div className="flex flex-col gap-5">
-            <h3 className="text-xs tracking-widest uppercase text-amber-600 font-semibold">
+            <h3 className="text-xs tracking-widest uppercase text-primary font-semibold">
               {t("columns.links")}
             </h3>
             <ul className="flex flex-col gap-3">
@@ -90,9 +90,9 @@ export default function Footer() {
                   <Link
                     href={href}
                     className="
-                      text-sm text-white/70 hover:text-amber-400
-                      transition-colors duration-200 flex items-center gap-2
-                      before:content-['·'] before:text-amber-700
+                      text-sm text-background/70 hover:text-primary hover:-translate-y-1 block
+                      transition-all duration-500 flex items-center gap-2
+                      before:content-['·'] before:text-primary
                     "
                   >
                     {t(labelKey)}
@@ -106,12 +106,12 @@ export default function Footer() {
       </Container>
 
       {/* Bottom bar */}
-      <div className="border-t border-white/10">
+      <div className="border-t border-background/10">
         <Container className="py-5 flex flex-col md:flex-row items-center justify-between gap-2">
-          <p className="text-xs text-white/40">
+          <p className="text-xs text-background/40">
             {t("copyright")}
           </p>
-          <p className="text-xs text-white/30 tracking-widest uppercase">
+          <p className="text-xs text-background/30 tracking-widest uppercase">
             {t("location")}
           </p>
         </Container>
