@@ -72,7 +72,7 @@ export default function HeroSection({
                     <Button
                         asChild
                         size={size === "full" ? "lg" : "sm"}
-                        className="mt-2 rounded-full border border-white/30 bg-white/10 px-8 text-white backdrop-blur-sm hover:bg-white hover:text-slate-900 transition-all duration-300"
+                        className="mt-2 rounded-full border border-white/30 bg-white/10 px-8 text-white backdrop-blur-sm hover:bg-white hover:text-foreground transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
                     >
                         <Link href={ctaHref}>{ctaText}</Link>
                     </Button>

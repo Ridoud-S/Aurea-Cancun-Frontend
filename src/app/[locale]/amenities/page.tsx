@@ -6,7 +6,6 @@ export default async function AmenitiesPage() {
     const t = await getTranslations("amenitiesPage.hero");
     return (
         <main>
-            <h1>Amenidades</h1>
             <HeroSection
                 title={t("title")}
                 subtitle={t("subtitle")}

@@ -40,14 +40,14 @@ export default function FeaturedRooms() {
     const t = useTranslations("rooms");
 
     return (
-        <section className="py-24 bg-white">
+        <section className="py-24 bg-background">
             <Container>
                 {/* Cabecera de la sección */}
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-serif text-slate-900 mb-4">
+                    <h2 className="text-4xl md:text-5xl font-serif text-foreground mb-4">
                         {t("sectionTitle")}
                     </h2>
-                    <p className="text-slate-500 max-w-2xl mx-auto">
+                    <p className="text-muted-foreground max-w-2xl mx-auto">
                         {t("sectionSubtitle")}
                     </p>
                 </div>
@@ -72,8 +72,8 @@ export default function FeaturedRooms() {
                         </CarouselContent>
 
                         {/* Controles del carrusel */}
-                        <CarouselPrevious className="hidden md:flex -left-4 border-amber-700 text-amber-700 hover:bg-amber-700 hover:text-white" />
-                        <CarouselNext className="hidden md:flex -right-4 border-amber-700 text-amber-700 hover:bg-amber-700 hover:text-white" />
+                        <CarouselPrevious className="hidden md:flex -left-4 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(var(--color-primary),0.3)]" />
+                        <CarouselNext className="hidden md:flex -right-4 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(var(--color-primary),0.3)]" />
                     </Carousel>
                 </div>
             </Container>

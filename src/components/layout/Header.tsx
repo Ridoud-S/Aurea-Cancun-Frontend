@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -20,60 +21,94 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Logotipo en formato Horizontal
+  const BrandLogo = () => (
+    <Link 
+      href="/" 
+      className="flex items-center gap-3 md:gap-4 group"
+    >
+      <Image
+        src="/logo.png"
+        alt="Aurea Cancún"
+        width={70}
+        height={70}
+        className="w-12 h-12 md:w-16 md:h-16 object-contain transition-all duration-300 group-hover:scale-105"
+        priority
+      />
+      <div className="flex flex-col items-start justify-center">
+        <span className={cn(
+          "font-serif text-xl md:text-3xl leading-none font-medium transition-colors duration-500",
+          isScrolled ? "text-foreground" : "text-white"
+        )}>
+          AUREA
+        </span>
+        <span className="text-[9px] md:text-xs tracking-[0.25em] uppercase font-semibold text-primary mt-1">
+          CANCÚN
+        </span>
+      </div>
+    </Link>
+  );
+
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out",
         isScrolled
-          ? "bg-white text-slate-900 shadow-md py-3"
-          : "bg-black/20 backdrop-blur-md text-white border-b border-white/10 py-5"
+          ? "bg-background text-foreground shadow-sm"
+          : "bg-transparent text-white"
       )}
     >
-      {/* Desktop — 3 zonas en una fila */}
-      <Container className="hidden lg:flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="flex-shrink-0">
-          <span className={cn(
-            "font-serif text-xl tracking-[0.2em] uppercase transition-all duration-300",
-            isScrolled ? "text-slate-900" : "text-white"
-          )}>
-            Aurea Cancún
-          </span>
-        </Link>
-
-        {/* Nav central */}
-        <Navbar isScrolled={isScrolled} />
-
-        {/* Derecha: idioma + CTA */}
-        <div className="flex items-center gap-3 flex-shrink-0">
-          <LanguageSwitcher isScrolled={isScrolled} />
-          <Button
-            size="sm"
-            className={cn(
-              "rounded-full text-xs tracking-widest uppercase transition-all duration-300",
-              isScrolled
-                ? "bg-amber-700 text-white hover:bg-amber-800"
-                : "bg-transparent border border-white text-white hover:bg-white hover:text-slate-900"
-            )}
-            asChild
-          >
-            <Link href="/book">{t("bookNow")}</Link>
-          </Button>
+      {/* ────────────────────────────────────────────────────────
+          DESKTOP: Diseño apilado (2 filas) estilo Tesoro Ixtapa
+          ──────────────────────────────────────────────────────── */}
+      <div className="hidden lg:flex flex-col w-full">
+        {/* Fila 1: Logo centrado */}
+        <div className="flex justify-center items-center pt-3 pb-2">
+          <BrandLogo />
         </div>
-      </Container>
 
-      {/* Mobile — logo izquierda + hamburguesa derecha */}
-      <Container className="flex lg:hidden items-center justify-between">
-        <Link href="/" className="flex-shrink-0">
-          <span className={cn(
-            "font-serif text-lg tracking-[0.2em] uppercase transition-all duration-300",
-            isScrolled ? "text-slate-900" : "text-white"
-          )}>
-            Aurea Cancún
-          </span>
-        </Link>
+        {/* Línea divisoria */}
+        <div className={cn(
+          "w-full border-t transition-colors duration-500",
+          isScrolled ? "border-border/50" : "border-white/20"
+        )} />
+
+        {/* Fila 2: Navegación y Acciones */}
+        <Container className="flex items-center justify-between py-2">
+          <div className="flex-1 flex justify-center lg:justify-start">
+            <Navbar isScrolled={isScrolled} />
+          </div>
+
+          <div className="flex items-center gap-4 flex-shrink-0">
+            <LanguageSwitcher isScrolled={isScrolled} />
+            <Button
+              size="sm"
+              className={cn(
+                "rounded-full text-xs tracking-widest uppercase transition-all duration-500",
+                isScrolled
+                  ? "bg-primary text-primary-foreground hover:bg-primary/90 hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(var(--color-primary),0.4)]"
+                  : "bg-transparent border border-white text-white hover:bg-white hover:text-foreground hover:-translate-y-0.5"
+              )}
+              asChild
+            >
+              <Link href="/book">{t("bookNow")}</Link>
+            </Button>
+          </div>
+        </Container>
+      </div>
+
+
+      <div className={cn(
+        "lg:hidden flex items-center justify-between w-full py-2 px-4",
+        isScrolled ? "border-b border-border/50" : "border-b border-transparent"
+      )}>
+        <div className="w-10" /> {/* Espaciador invisible para balancear visualmente el menú */}
+
+        {/* En móvil, el logo va centrado y puede hacer crecer la barra naturalmente */}
+        <BrandLogo />
+
         <MobileMenu isScrolled={isScrolled} />
-      </Container>
+      </div>
     </header>
   );
 }

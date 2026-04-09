@@ -31,9 +31,9 @@ export default function MobileMenu({ isScrolled }: MobileMenuProps) {
                         variant="outline"
                         size="icon"
                         className={cn(
-                            "transition-all duration-300",
+                            "transition-all duration-500",
                             isScrolled
-                                ? "text-slate-900 border-slate-200"
+                                ? "text-foreground border-border"
                                 : "bg-transparent text-white border-white/30 hover:bg-white/10"
                         )}
                     >
@@ -53,7 +53,7 @@ export default function MobileMenu({ isScrolled }: MobileMenuProps) {
 
                     {/* Cabecera del Sheet */}
                     <div className="pt-8 px-2">
-                        <p className="font-serif tracking-widest text-xl uppercase text-slate-800">
+                        <p className="font-serif tracking-widest text-xl uppercase text-foreground">
                             Aurea Cancún
                         </p>
                         <Separator className="my-6" />
@@ -65,7 +65,7 @@ export default function MobileMenu({ isScrolled }: MobileMenuProps) {
                             <Link
                                 key={link.key}
                                 href={link.href}
-                                className="font-serif text-2xl text-slate-800 hover:text-amber-700 transition-colors"
+                                className="font-serif text-2xl text-foreground hover:text-primary transition-colors duration-500"
                             >
                                 {t(link.key)}
                             </Link>
@@ -77,7 +77,7 @@ export default function MobileMenu({ isScrolled }: MobileMenuProps) {
                         <Separator className="mb-2" />
                         <LanguageSwitcher />
                         <Button
-                            className="w-full rounded-full bg-amber-700 hover:bg-amber-800 text-white tracking-widest uppercase text-xs"
+                            className="w-full rounded-full bg-primary hover:bg-primary/90 text-primary-foreground tracking-widest uppercase text-xs transition-all duration-500"
                             asChild
                         >
                             <Link href="/book">{t("bookNow")}</Link>
