@@ -1,0 +1,82 @@
+import { getTranslations } from "next-intl/server";
+import {
+    Waves,
+    UtensilsCrossed,
+    Dumbbell,
+    Sparkles,
+    Wine,
+    Umbrella,
+    Wifi,
+    CarFront,
+    ConciergeBell,
+    Sailboat,
+    Flower2,
+    ShowerHead,
+} from "lucide-react";
+import Container from "@/components/common/Container";
+
+// ---------------------------------------------------------------------------
+// Estructura de datos
+// ---------------------------------------------------------------------------
+const amenities = [
+    { id: "beachAccess",     icon: Waves           },
+    { id: "restaurant",      icon: UtensilsCrossed },
+    { id: "fitnessCenter",   icon: Dumbbell        },
+    { id: "spa",             icon: Sparkles        },
+    { id: "bar",             icon: Wine            },
+    { id: "poolBar",         icon: Umbrella        },
+    { id: "freeWifi",        icon: Wifi            },
+    { id: "valetParking",    icon: CarFront        },
+    { id: "concierge",       icon: ConciergeBell   },
+    { id: "watersports",     icon: Sailboat        },
+    { id: "gardenTerrace",   icon: Flower2         },
+    { id: "rainShower",      icon: ShowerHead      },
+] as const;
+
+// ---------------------------------------------------------------------------
+// Component
+// ---------------------------------------------------------------------------
+export default async function AmenitiesSection() {
+    const tSection  = await getTranslations("home.amenitiesSection");
+    const tAmenities = await getTranslations("amenities");
+
+    return (
+        <section className="bg-stone-50 py-20">
+            <Container>
+                {/* Encabezado */}
+                <div className="mb-14 flex flex-col items-center gap-3 text-center">
+                    <p className="text-xs font-semibold tracking-widest uppercase text-amber-700">
+                        {tSection("eyebrow")}
+                    </p>
+                    <h2 className="font-serif text-3xl font-semibold tracking-wide text-stone-900 md:text-4xl">
+                        {tSection("title")}
+                    </h2>
+                    <p className="max-w-xl text-sm leading-relaxed text-stone-500 md:text-base">
+                        {tSection("subtitle")}
+                    </p>
+                </div>
+
+                {/* Grid de amenidades */}
+                <ul className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
+                    {amenities.map(({ id, icon: Icon }) => (
+                        <li
+                            key={id}
+                            className="
+                                group flex flex-col items-center gap-3 rounded-xl
+                                bg-white/0 px-4 py-6 text-center
+                                transition-all duration-300 ease-in-out
+                                hover:-translate-y-1 hover:bg-white hover:shadow-md
+                                cursor-default
+                            "
+                        >
+                            <Icon className="h-10 w-10 text-amber-700 transition-transform duration-300 group-hover:scale-110" />
+                            <span className="text-xs font-semibold tracking-widest uppercase text-stone-600">
+                                {tAmenities(id)}
+                            </span>
+                        </li>
+                    ))}
+                </ul>
+            </Container>
+        </section>
+    );
+}

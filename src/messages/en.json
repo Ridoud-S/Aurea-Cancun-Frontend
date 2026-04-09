@@ -17,6 +17,11 @@
         "welcome": {
             "title": "Welcome to Aurea",
             "description": "An oasis of tranquility on the shores of the Caribbean Sea."
+        },
+        "amenitiesSection": {
+            "eyebrow": "Services & Experiences",
+            "title": "Everything you need, all in one place",
+            "subtitle": "From the moment you arrive, every detail has been designed so you can simply enjoy."
         }
     },
     "offersPage": {
@@ -31,6 +36,13 @@
             "title": "Our Rooms",
             "subtitle": "Comfort and elegance with views of the Caribbean Sea.",
             "button": "Explore Rooms"
+        }
+    },
+    "amenitiesPage": {
+        "hero": {
+            "title": "Our Amenities",
+            "subtitle": "Enjoy services designed to elevate your experience.",
+            "button": "Explore Amenities"
         }
     },
     "footer": {
@@ -56,5 +68,19 @@
         },
         "copyright": "© 2026 Aurea Cancún. All rights reserved.",
         "location": "Luxury Beachfront · Cancún, México"
+    },
+    "amenities": {
+        "beachAccess":   "Beach Access",
+        "restaurant":    "Restaurant",
+        "fitnessCenter": "Fitness Center",
+        "spa":           "Spa & Wellness",
+        "bar":           "Rooftop Bar",
+        "poolBar":       "Pool Bar",
+        "freeWifi":      "Free Wi-Fi",
+        "valetParking":  "Valet Parking",
+        "concierge":     "Concierge",
+        "watersports":   "Water Sports",
+        "gardenTerrace": "Garden Terrace",
+        "rainShower":    "Rain Shower"
     }
 }
