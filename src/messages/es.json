@@ -96,5 +96,11 @@
             "family-villa": "Villa Familiar",
             "presidential": "Suite Presidencial"
         }
+    },
+    "socialGallery": {
+        "eyebrow": "Redes Sociales",
+        "title": "Vive la Experiencia Aurea",
+        "subtitle": "Comparte tus momentos con nosotros usando #AureaCancun",
+        "followButton": "Sigue a @AureaCancun"
     }
 }
