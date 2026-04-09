@@ -72,7 +72,7 @@ export default function Header() {
             Aurea Cancún
           </span>
         </Link>
-        <MobileMenu />
+        <MobileMenu isScrolled={isScrolled} />
       </Container>
     </header>
   );

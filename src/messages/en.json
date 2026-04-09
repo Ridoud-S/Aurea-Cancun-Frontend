@@ -4,15 +4,19 @@
         "rooms": "Rooms",
         "offers": "Offers",
         "amenities": "Amenities",
+        "suites": "Suites",
         "experiences": "Experiences",
+        "gastronomy": "Gastronomy",
+        "spa": "Spa",
         "contact": "Contact",
-        "bookNow": "Book now"
+        "bookNow": "Book Now",
+        "menu": "Navigation menu"
     },
     "home": {
         "hero": {
             "title": "Discover beachfront luxury in Cancún",
-            "subtitle": "Escape to a premium experience of white sand, gastronomy and comfort.",
-            "button": "Book now"
+            "subtitle": "Escape to a premium experience of white sand, gastronomy, and comfort.",
+            "button": "Explore Rooms"
         },
         "welcome": {
             "title": "Welcome to Aurea",
@@ -34,7 +38,7 @@
         }
     },
     "footer": {
-        "tagline": "An oasis of luxury on the Caribbean Sea. Unique experiences, signature gastronomy and the finest service on the Riviera Maya.",
+        "tagline": "A luxury oasis on the Caribbean Sea. Unique experiences, signature cuisine, and the most refined service in the Riviera Maya.",
         "columns": {
             "company": "Company",
             "links": "Links"
@@ -50,11 +54,24 @@
             "book": "Book now",
             "offers": "Exclusive offers",
             "contact": "Contact",
-            "privacy": "Privacy policy",
+            "privacy": "Privacy notice",
             "legal": "Legal notice",
             "bestRate": "Best rate guaranteed"
         },
         "copyright": "© 2026 Aurea Cancún. All rights reserved.",
-        "location": "Luxury Beachfront · Cancún, México"
+        "location": "Luxury Beachfront · Cancún, Mexico"
+    },
+    "rooms": {
+        "sectionTitle": "Luxury Stays",
+        "sectionSubtitle": "Find your perfect oceanfront retreat",
+        "from": "From",
+        "night": "/ night",
+        "viewDetails": "View Details",
+        "types": {
+            "deluxe-ocean": "Deluxe Ocean View",
+            "swim-up-suite": "Swim-Up Suite",
+            "family-villa": "Family Villa",
+            "presidential": "Presidential Suite"
+        }
     }
 }
