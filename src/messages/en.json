@@ -23,6 +23,12 @@
             "eyebrow": "Services & Experiences",
             "title": "Everything you need, all in one place",
             "subtitle": "From the moment you arrive, every detail has been designed so you can simply enjoy."
+        },
+        "socialGallery": {
+            "eyebrow": "",
+            "title": "Live the Aurea Experience",
+            "subtitle": "Share your moments with us using #AureaCancun",
+            "followButton": "Follow @AureaCancun"
         }
     },
     "offersPage": {

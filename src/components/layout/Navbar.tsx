@@ -22,11 +22,11 @@ export default function Navbar({ isScrolled }: NavbarProps) {
             key={link.key}
             href={link.href}
             className={cn(
-              "text-sm font-medium tracking-wide transition-colors duration-200",
+              "text-sm font-medium tracking-wide transition-colors duration-500",
               isScrolled
                 ? isActive
-                  ? "text-amber-700"
-                  : "text-slate-900 hover:text-amber-700"
+                  ? "text-primary"
+                  : "text-foreground hover:text-primary"
                 : isActive
                   ? "text-white font-semibold"
                   : "text-white/80 hover:text-white"
