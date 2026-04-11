@@ -23,12 +23,18 @@
             "eyebrow": "Servicios y Experiencias",
             "title": "Todo lo que necesitas, en un solo lugar",
             "subtitle": "Desde que llegas, cada detalle está diseñado para que simplemente disfrutes."
+        },
+        "socialGallery": {
+            "eyebrow": "",
+            "title": "Vive la Experiencia Aurea",
+            "subtitle": "Comparte tus momentos con nosotros usando #AureaCancun",
+            "followButton": "Sigue a @AureaCancun"
         }
     },
     "offersPage": {
         "hero": {
             "title": "Ofertas Exclusivas",
-            "subtitle": "Reserva directo y obtén los mejors beneficios.",
+            "subtitle": "Reserva directo y obtén los mejores beneficios.",
             "button": "Explorar Ofertas"
         }
     },
@@ -36,7 +42,7 @@
         "hero": {
             "title": "Nuestras Habitaciones",
             "subtitle": "Confort y elegancia con vista al mar Caribe.",
-            "button": "Explorar Hab itaciones"
+            "button": "Explorar Habitaciones"
         }
     },
     "amenitiesPage": {
