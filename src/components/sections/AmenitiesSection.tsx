@@ -15,9 +15,6 @@ import {
 } from "lucide-react";
 import Container from "@/components/common/Container";
 
-// ---------------------------------------------------------------------------
-// Estructura de datos
-// ---------------------------------------------------------------------------
 const amenities = [
     { id: "beachAccess",     icon: Waves           },
     { id: "restaurant",      icon: UtensilsCrossed },
@@ -33,44 +30,41 @@ const amenities = [
     { id: "rainShower",      icon: ShowerHead      },
 ] as const;
 
-// ---------------------------------------------------------------------------
-// Component
-// ---------------------------------------------------------------------------
 export default async function AmenitiesSection() {
-    const tSection  = await getTranslations("home.amenitiesSection");
+    const tSection   = await getTranslations("home.amenitiesSection");
     const tAmenities = await getTranslations("amenities");
 
     return (
         <section className="bg-background py-20">
             <Container>
                 {/* Encabezado */}
-                <div className="mb-14 flex flex-col items-center gap-3 text-center">
+                <div className="mb-10 md:mb-14 flex flex-col items-center gap-3 text-center">
                     <p className="text-xs font-semibold tracking-widest uppercase text-primary">
                         {tSection("eyebrow")}
                     </p>
-                    <h2 className="font-serif text-3xl font-semibold tracking-wide text-foreground md:text-4xl">
+                    <h2 className="font-serif text-2xl md:text-3xl font-semibold tracking-wide text-foreground md:text-4xl">
                         {tSection("title")}
                     </h2>
-                    <p className="max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base">
+                    <p className="max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base hidden md:block">
                         {tSection("subtitle")}
                     </p>
                 </div>
 
                 {/* Grid de amenidades */}
-                <ul className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
+                <ul className="grid grid-cols-3 gap-2 md:grid-cols-3 lg:grid-cols-6 md:gap-4">
                     {amenities.map(({ id, icon: Icon }) => (
                         <li
                             key={id}
                             className="
-                                group flex flex-col items-center gap-3 rounded-xl
-                                bg-background/0 px-4 py-6 text-center
+                                group flex flex-col items-center gap-2 rounded-xl
+                                bg-background/0 px-2 py-4 md:px-4 md:py-6 text-center
                                 transition-all duration-500 ease-in-out
                                 hover:-translate-y-1 hover:bg-background hover:shadow-lg
                                 cursor-default
                             "
                         >
-                            <Icon className="h-10 w-10 text-primary transition-transform duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(var(--color-primary),0.5)]" />
-                            <span className="text-xs font-semibold tracking-widest uppercase text-muted-foreground">
+                            <Icon className="h-7 w-7 md:h-10 md:w-10 text-primary transition-transform duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(var(--color-primary),0.5)]" />
+                            <span className="text-[10px] md:text-xs font-semibold tracking-widest uppercase text-muted-foreground leading-tight">
                                 {tAmenities(id)}
                             </span>
                         </li>
